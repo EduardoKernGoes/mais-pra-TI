@@ -1,2 +1,14 @@
 @import url('./global.css');
 
+#main-section{
+    background-color: var(--primary);
+}
+
+.social-networks{
+    color: var(--grey);
+    transition: var(--transition);
+}
+
+.social-networks:hover{
+    color: var(--primary-100);
+}
