@@ -1,3 +1,32 @@
+## Module 1
+
 /module-1/exercise-lists/node_modules
 /module-1/exercise-lists/package-lock.json
 /module-1/exercise-lists/package.json
+
+## Module 3
+
+# Logs
+/module-3/sample-project/logs
+/module-3/sample-project/*.log
+/module-3/sample-project/npm-debug.log*
+/module-3/sample-project/yarn-debug.log*
+/module-3/sample-project/yarn-error.log*
+/module-3/sample-project/pnpm-debug.log*
+/module-3/sample-project/lerna-debug.log*
+
+/module-3/sample-project/node_modules
+/module-3/sample-project/dist
+/module-3/sample-project/dist-ssr
+/module-3/sample-project/*.local
+
+# Editor directories and files
+/module-3/sample-project/.vscode/*
+/module-3/sample-project/!.vscode/extensions.json
+/module-3/sample-project/.idea
+/module-3/sample-project/.DS_Store
+/module-3/sample-project/*.suo
+/module-3/sample-project/*.ntvs*
+/module-3/sample-project/*.njsproj
+/module-3/sample-project/*.sln
+/module-3/sample-project/*.sw?
