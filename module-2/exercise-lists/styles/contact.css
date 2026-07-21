@@ -1,0 +1,24 @@
+@import url('./global.css');
+
+.main-content{
+    background: var(--primary);
+}
+
+main p{
+    text-indent: 50px;
+    font-size: 1.5rem;
+}
+
+label{
+    font-size: 1.3rem;
+}
+
+strong{
+    color: var(--alert);
+}
+
+#description{
+    resize: none;
+    height: 400px;
+    overflow-x: none;
+}
