@@ -9,23 +9,21 @@
     --primary-300:#f7a16c;
     --primary-200:#fbb983;
     --primary-100:#ffd29a;
+    --secondary-bold: #0b2a59;
+    --secondary-900: #0f3978;
+    --secondary-800: #154c9e;
+    --secondary-700: #1958b5;
+    --secondary-600: #206ad6;
+    --secondary: #307ef2;
+    --secondary-400: #5798f5;
+    --secondary-300: #80b4f8;
+    --secondary-200: #a8cdfa;
+    --secondary-100: #d1e6fd;
     --black:#000000;
     --white:#ffffff;
     --grey:#a5a5a5;
+    --alert:#e60000;
     --transition: 0.4s;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-footer{
-    background-color: var(--black);
-}
-
-a{
-    text-decoration: none;
 }
 
 @font-face {
@@ -34,6 +32,32 @@ a{
     src: url('/module-2/exercise-lists/assets/fonts/brother-signature/Brother-Signature.otf') format('truetype');
     src: url('/module-2/exercise-lists/assets/fonts/brother-signature/Brother-Signature.woff') format('truetype');
     src: url('/module-2/exercise-lists/assets/fonts/brother-signature/Brother-Signature.woff2') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+footer{
+    background-color: var(--black);
+}
+
+.social-networks{
+  color: var(--grey);
+  transition: var(--transition);
+}
+
+.social-networks:hover{
+  color: var(--primary-100);
 }
 
 #logo{
@@ -50,4 +74,10 @@ a{
 .nav-link:hover{
     color: var(--primary-200);
     border-bottom: 2px solid var(--primary-200);
+}
+
+@media (max-width: 767px){
+    #logo{
+        font-size: 2.5rem;
+    }
 }

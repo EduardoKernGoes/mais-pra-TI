@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="stylesheet" href="../styles/contact.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../components/header.js" defer></script>
+        <script src="../components/footer.js" defer></script>
+    </head>
+    <body>
+        <section class="main-content">
+            <site-header></site-header>
+        </section>
+        <main class="container py-4">
+            <p>
+                Gostou do meu trabalho e quer transformar sua próxima grande ideia em um projeto real e funcional? Estou sempre aberto a novos desafios e pronto para solucionar o seu problema da melhor maneira possível. Entre em contato comigo para podermos conversar mais sobre:
+            </p>
+            <ul class="ps-5">
+                <li>
+                    <h2 class="fs-4">
+                        E-mail: edugoes215@gmail.com
+                    </h2>
+                </li>
+                <li>
+                    <h2 class="fs-4">
+                        Telefone: (51) 992590841
+                    </h2>
+                </li>
+            </ul>
+            <p>
+                Caso deseje algo mais simples e rápido:
+            </p>
+            <form class="row">
+                <div class="col-md-4">
+                    <label class="form-label" for="name"><strong>* </strong>Nome:</label>
+                    <input class="form-control" id="name" type="text" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="email"><strong>* </strong>Email:</label>
+                    <input class="form-control" id="email" type="email" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="phone">Telefone:</label>
+                    <input class="form-control" id="phone" type="tel">
+                </div>
+
+                <div class="col-12 mt-4">
+                    <div class="form-check form-switch d-flex align-items-center gap-3">
+                        <input class="form-check-input" type="checkbox" id="isEnterprise" style="cursor: pointer;">
+                        <label class="form-check-label" for="isEnterprise" style="cursor: pointer;">
+                            Sou uma empresa?
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12 d-none" id="camposExtras">
+                    <div class="row">
+                        <div class="col-md-6 mt-2">
+                            <label class="form-label" for="companyName"><strong>* </strong>Nome da empresa:</label>
+                            <input class="form-control" id="companyName" type="text">
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label class="form-label" for="companyWebSite">Site/Linkedin:</label>
+                            <input class="form-control" id="companyWebSite" type="url" placeholder="Ex: https://...">
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <label class="form-label" for="jobLink">Link da vaga:</label>
+                            <input class="form-control" id="jobLink" type="url" placeholder="Ex: https://...">
+                        </div>
+                        <div class="col-md-5 mt-2">
+                            <label class="form-label" for="jobPosition">Cargo:</label>
+                            <div id="jobPoistionDiv">
+                                <select id="selectPositions" class="form-select">
+                                    <option selected>Escolha uma opção</option>
+                                    <option value="dev-front-end">Dev. Front-end</option>
+                                    <option value="dev-back-end">Dev. Back-end</option>
+                                    <option value="dev-full-stack">Dev. Full-stack</option>
+                                    <option value="dev-java">Dev. Java</option>
+                                    <option value="dev-php">Dev. PHP</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                                <input class="form-control d-none" id="jobPosition" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-2">
+                            <label class="form-label" for="jobSalary">Salário:</label>
+                            <div class="input-group">
+                                <select class="form-select flex-grow-0 w-auto">
+                                    <option selected>R$</option>
+                                    <option>$</option>
+                                    <option>&euro;</option>
+                                </select>
+                                <input type="number" class="form-control">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <label class="form-label" for="description"><strong>* </strong>Fale um pouco mais sobre:</label>
+                    <textarea class="form-control" id="description" required></textarea>
+                </div>
+
+                <button id="submitButton" class="btn btn-primary col-1 mx-auto mt-5" type="submit">Enviar</button>
+            </form>
+        </main>
+        <site-footer></site-footer>
+
+        <script src="../js/contact.js"></script>
+    </body>
+</html>
