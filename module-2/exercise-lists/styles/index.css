@@ -1,0 +1,38 @@
+@import url('./global.css');
+
+.main-section{
+  background: linear-gradient(
+      -30deg,
+      var(--primary) 40%,
+      var(--secondary)
+  )
+}
+
+.main-title{
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.index-image{
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.linguages {
+  max-width: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.linguages i {
+  font-size: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.linguages i:hover {
+  transform: scale(1.2);
+}
