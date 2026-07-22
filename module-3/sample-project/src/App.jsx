@@ -1,30 +1,49 @@
 import { useState } from 'react'
 
-function Saudacao({nome}){
-  return <h2>Olá {nome}, seja bem-vindo(a)!!</h2>
-}
+function App() {
 
-export default function App() {
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      texto: "Ir para academia",
+      categoria: 'Exercicios',
+      completa: false
+    },
+    {
+      id: 2,
+      texto: "Fazer tarefa do +PraTI",
+      categoria: 'Estudos',
+      completa: false
+    },
+    {
+      id: 3,
+      texto: "Limpar a Casa",
+      categoria: 'Diária',
+      completa: true
+    }
+  ])
 
-  const [tarefas, setTarefas] = useState([
-    { id: 1, nome: 'Estudar React', concluida: false },
-    { id: 2, nome: 'Fazer exercícios', concluida: true },
-    { id: 3, nome: 'Ler documentação', concluida: false },
-  ]);
+  const concluirTarefa = (id) => {
+    setTodos(todos.map((todo) => 
+      todo.id === id ? {...todo, completa: !todo.completa} : todo
+    ))
+  }
 
-  return (
-    <div>
-      <h1>Lista de Tarefas</h1>
-      <ul>
-        {tarefas.map((tarefa) => (
-          <li>
-            <p id={tarefa.id} style={{ width: '100px', color: tarefa.concluida ? 'green' : 'red' }}>
-              {tarefa.nome}
-            </p>
-          </li>
-        ))}
-      </ul>
+  return<div className="app">
+    <h1>Lista de tarefas</h1>
+    <div className="todo-list">
+      {todos.map((todo) => (
+        <div className='todo' key={todo.id}>
+          <div className='conteudo'>
+            <input type='checkbox' checked={todo.completa} onChange={() => concluirTarefa(todo.id)}/>
+            <p>{todo.texto}</p>
+            <p>{todo.categoria}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  )
+  </div>
 
 }
+
+export default App
