@@ -2,6 +2,7 @@ import { useState, useEffect, useEffectEvent } from "react"
 import { Routes, Route } from 'react-router-dom'
 import Header from "./components/Header/Header"
 import Home from "./pages/Home/Home"
+import Materia from "./pages/Materia/Materia"
 import './App.css'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/materia/:id" element={<Materia />} />
       </Routes>
     </>
   )

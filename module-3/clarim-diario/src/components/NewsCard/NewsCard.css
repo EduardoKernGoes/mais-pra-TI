@@ -19,6 +19,11 @@
     margin: 8px 0 6px;
 }
 
+.card__titulo a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .card__resumo{
     font-size: 14px;
     color: var(--cinza-legenda);
