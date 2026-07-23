@@ -1,37 +1,38 @@
+import { useState, useEffect, useEffectEvent } from "react"
+import { Routes, Route } from 'react-router-dom'
 import Header from "./components/Header/Header"
-import NewsCard from "./components/NewsCard/NewsCard"
-import { noticias } from './data/noticias'
+import Home from "./pages/Home/Home"
 import './App.css'
-import './styles/variables.css'
-import './styles/global.css'
 
 function App() {
-  const [ manchete, ...demais ] = noticias
+  const [ tema, setTema ] = useState(() => {
+    const salvo = localStorage.getItem('tema') || 'light'
+
+    if(salvo) return salvo
+
+    const preferenciaEscuro = window.matchMedia('(preferences-color-scheme: dark)').matches
+
+    if(preferenciaEscuro) return 'dark'
+
+    return 'light'
+  })
+
+  function alterarTema() {
+    setTema(t => (t === 'light' ? 'dark' : 'light'))
+  }
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', tema)
+    localStorage.setItem('tema', tema)
+  }, [tema])
 
   return (
     <>
-      <Header />
+      <Header tema={tema} alterarTema={alterarTema}/>
 
-      <main className="container">
-        <section className="manchete">
-          <NewsCard
-            categoria = {manchete.categoria}
-            titulo = {manchete.titulo}
-            resumo = {manchete.resumo}
-          />
-        </section>
-
-        <section className="grade">
-          {demais.map((noticia) => (
-            <NewsCard 
-              key = {noticia.id}
-              categoria = {noticia.categoria}
-              titulo = {noticia.titulo}
-              resumo = {noticia.resumo}
-            />
-          ))}
-        </section>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   )
 }
