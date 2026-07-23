@@ -1,8 +1,12 @@
-import { useState, useEffect, useEffectEvent } from "react"
+import { useState, useEffect } from "react"
 import { Routes, Route } from 'react-router-dom'
 import Header from "./components/Header/Header"
 import Home from "./pages/Home/Home"
 import Materia from "./pages/Materia/Materia"
+import Cadastro from "./pages/Cadastro/Cadastro"
+import Login from "./pages/Login/Login"
+import RotaProtegida from "./components/RotaProtegida"
+import Painel from "./pages/Painel/Painel"
 import './App.css'
 
 function App() {
@@ -34,6 +38,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/materia/:id" element={<Materia />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/login" element={<Login />} /> 
+        <Route path='/painel' element={
+          <RotaProtegida>
+            <Painel />
+          </RotaProtegida>
+        } />
       </Routes>
     </>
   )
