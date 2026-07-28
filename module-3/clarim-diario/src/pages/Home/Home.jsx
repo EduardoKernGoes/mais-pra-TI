@@ -1,8 +1,33 @@
+import { useEffect, useState } from "react"
 import NewsCard from "../../components/NewsCard/NewsCard"
-import { noticias } from '../../data/noticias'
+import { listarNoticias } from "../../services/noticias"
 import './Home.css'
 
 function Home() {
+    const [ noticias, setNoticias ] = useState([])
+    const [ carregando, setCarregando ] = useState(true)
+    const [ erro, setErro ] = useState('')
+
+    useEffect(() => {
+        async function carregar() {
+            try{
+                setCarregando(true)
+                setErro('')
+                const dados = await listarNoticias()
+                setNoticias(dados)
+            } catch (erro){
+                setErro("Não foi possível carregar as notícias: ", erro)
+            } finally {
+                setCarregando(false)
+            }
+        }
+
+        carregar()
+    }, [])
+
+    if(carregando) return <p className="aviso-tela">Carregando...</p>
+    if(erro) return <p className="aviso-tela">{erro}</p>
+
     const [ manchete, ...demais ] = noticias
 
     return (
