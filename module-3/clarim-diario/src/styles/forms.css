@@ -1,0 +1,70 @@
+.formulario {
+    max-width: 460px;
+    margin: 32px auto 48px;
+    border: 2px solid var(--tinta);
+    padding: 32px;
+    background: var(--papel-card, #fff);
+}
+
+.formulario h1 {
+    font-size: 28px;
+    border-bottom: 3px double var(--tinta);
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.formulario label {
+    display: block;
+    font-family: var(--fonte-ui);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cinza-legenda);
+    margin: 16px 0 4px;
+}
+
+.formulario input {
+    width: 100%;
+    font-family: var(--fonte-ui);
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid var(--tinta);
+    background: transparent;
+    color: var(--tinta);
+}
+.formulario input:focus {
+    outline: none;
+    border-color: var(--urgente);
+}
+
+.aviso {
+    font-family: var(--fonte-ui);
+    font-size: 13px;
+    color: var(--urgente);
+    margin-top: 14px;
+}
+
+.formulario button {
+    width: 100%;
+    font-family: var(--fonte-ui);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--urgente);
+    color: #fff;
+    border: none;
+    padding: 13px;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+.formulario button:hover { filter: brightness(1.1); }
+
+.rodape-form {
+    text-align: center;
+    font-family: var(--fonte-ui);
+    font-size: 14px;
+    margin-top: 16px;
+}

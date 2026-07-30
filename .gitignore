@@ -30,3 +30,28 @@
 /module-3/sample-project/*.njsproj
 /module-3/sample-project/*.sln
 /module-3/sample-project/*.sw?
+
+# Logs
+/module-3/clarim-diario/logs
+/module-3/clarim-diario/*.log
+/module-3/clarim-diario/npm-debug.log*
+/module-3/clarim-diario/yarn-debug.log*
+/module-3/clarim-diario/yarn-error.log*
+/module-3/clarim-diario/pnpm-debug.log*
+/module-3/clarim-diario/lerna-debug.log*
+
+/module-3/clarim-diario/node_modules
+/module-3/clarim-diario/dist
+/module-3/clarim-diario/dist-ssr
+/module-3/clarim-diario/*.local
+
+/module-3/clarim-diario/# Editor directories and files
+/module-3/clarim-diario/.vscode/*
+/module-3/clarim-diario/!.vscode/extensions.json
+/module-3/clarim-diario/.idea
+/module-3/clarim-diario/.DS_Store
+/module-3/clarim-diario/*.suo
+/module-3/clarim-diario/*.ntvs*
+/module-3/clarim-diario/*.njsproj
+/module-3/clarim-diario/*.sln
+/module-3/clarim-diario/*.sw?
